@@ -1,0 +1,8 @@
+{{ range $i, $member := . -}}
+名前    : {{ $member.Name }}
+{{ if ne $member.Comment "" -}}
+コメント: {{ $member.Comment }}
+{{ else -}}
+コメントはありません
+{{ end }}
+{{- end }}
